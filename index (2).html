@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>사물 인식 웹앱</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- TensorFlow & COCO-SSD -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white rounded-2xl shadow-xl p-8 max-w-xl w-full text-center">
+      <h1 class="text-2xl font-bold text-gray-800 mb-4">🔍 실시간 사물 인식</h1>
+
+      <video id="video" autoplay playsinline class="rounded-lg w-full mb-4"></video>
+      <canvas id="canvas" class="hidden"></canvas>
+
+      <button onclick="detectObjects()" class="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition mb-4">
+        인식하기
+      </button>
+
+      <div id="output" class="text-gray-800 text-md"></div>
+      <div id="alertBox" class="mt-4 text-red-600 text-xl font-bold hidden">⚠️ 멈춰!</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
