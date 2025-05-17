@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>실시간 객체 인식 - 모던 디자인</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>실시간 객체 인식</h1>
+    <div class="video-wrapper">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="canvas"></canvas>
+      <div id="status" class="status">감지 대기 중...</div>
+    </div>
+    <div id="recognized" class="recognized">인식된 객체: 없음</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
